@@ -1,0 +1,3 @@
+product_id,product_name,price,description,manufacturer,stock_quantity
+12345,Widget A,19.99,A high-quality widget.,Company X,75.0
+SKU-54321,SuperWidget,24.95,The ultimate super widget.,Brand Y,150.0
