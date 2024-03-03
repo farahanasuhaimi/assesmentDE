@@ -24,3 +24,4 @@ Based on given scenario, provide a detailed plan for setting up this cloud-based
 -	The specific cloud tools or services you would use for data collection, processing, and storage.
 -	Any potential challenges or considerations that need to be addressed.
 -	Please outline your plan, including the architecture and the tools or services you would utilize for each step of the data pipeline.
+  !(dataflow)[Data Pipeline for E-commerce Analytics.png]
