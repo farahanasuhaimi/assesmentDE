@@ -28,13 +28,15 @@
 Based on given scenario, provide a detailed plan for setting up this cloud-based data pipeline. Specify:
 -	The cloud provider you would choose for this project.
       - We have selected AWS services for most part of this pipeline.
-      - ![pipeline](./Data%20Pipeline%20for%20E-commerce%20Analytics.png)
 -	The specific cloud tools or services you would use for data collection, processing, and storage.
-      1. AWS Glue :
-      2. AWS Lambda : 
-      3. Amazon S3 :
-      4. Amazon Redshift :
-      5. Microsoft Power BI or Tableau : 
+      1. AWS Glue : to handle the various data formats and prepared for smoother and data cleaning and aggregation.
+      2. AWS Lambda : to transform the data such as cleaning, aggregating, and preparing for the next step, i.e. data analysis. 
+      3. Amazon S3 : To store processed and aggregated data. More like a pool (data lake) of data that can be retrieved in real-time efficiently such as for real-time data analytics.
+      4. Amazon Redshift : Similar to S3 but a long-term storage that is optimized for larger or older databases hence the name data warehouse. 
+      5. Microsoft Power BI or Tableau : Data analytics, real-time or scheduled depending on the needs, hourly, monthly, or yearly. 
 -	Any potential challenges or considerations that need to be addressed.
+      1. Scalability: with simple data ETL by AWS glue, larger and heavy traffics stream such as Khairul Aming's live Shopee required a better service, such as AWS Kinesis Data Streams service and Amazon EMR service.
+      2. Fault tolerance: an efficient monitoring services of each data sources and load balancer may be needed with bigger scale of e-commerce company.
+      3. Costing: AWS is know to be expensive with bigger load in certain services. Open source services such as Apache Iceberg, Compute Spark and Airflow Mage. If the company is starting small, it can pay for Amazon S3 for the cloud storage while utilising other open source toolkits. 
 -	Please outline your plan, including the architecture and the tools or services you would utilize for each step of the data pipeline.
-
+      ![pipeline](./Data%20Pipeline%20for%20E-commerce%20Analytics.png)
