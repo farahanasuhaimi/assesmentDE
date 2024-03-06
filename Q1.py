@@ -1,5 +1,5 @@
 from pyspark.sql import SparkSession
-from pyspark.sql.types import StringType, IntegerType
+from pyspark.sql.types import StringType, IntegerType, LongType
 from pyspark.sql.functions import when,udf
 
 # Initialize Spark session
@@ -30,6 +30,7 @@ add_email_col_udf = udf(add_email_col, StringType())
 customers_df_cl = customers_df_cl.withColumn('email', add_email_col_udf('email'))
 
 # 3. Clean phone numbers
+customers_df_cl = customers_df_cl.withColumn('Phone_new', customers_df_cl['Phone'].cast(LongType()))
 
 # Extract the week number, quarter, and hour from the transaction date and add these as new columns to the sales DataFrame.
 
