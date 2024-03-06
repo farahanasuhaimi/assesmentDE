@@ -32,6 +32,10 @@ customers_df_cl = customers_df_cl.withColumn('email', add_email_col_udf('email')
 # 3. Clean phone numbers
 customers_df_cl = customers_df_cl.withColumn('Phone_new', customers_df_cl['Phone'].cast(LongType()))
 
+# 4. Clean and preprocess the sales data
+sales_df_cl = sales_df.dropna()
+sales_df_cl = sales_df_cl.dropDuplicates()
+
 # Extract the week number, quarter, and hour from the transaction date and add these as new columns to the sales DataFrame.
 
 # Calculate Total sales by month, product, and the total sales amount for each customer.

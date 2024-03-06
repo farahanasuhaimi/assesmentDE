@@ -6,7 +6,8 @@
 - [ ] Identify the top 10 customers with the highest total sales amount.
 - [ ] Generate a CSV for total sales by customer with email address and phone number.
 - [ ] Export the results to a CSV file by month/year.
-
+    
+     PySpark script : [Code](./Q1.py)
 ## Question 2: Write a Python script
 - [x] Combine the data from all the JSON files into a single, standardized JSON format.
 - [x] Handle any inconsistencies or missing data in the supplier files.
